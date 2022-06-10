@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>MATRIX ASSIGNMENT</h1>
+    <button onclick="matrix()">START</button><br><br>
+    <h2>Matrix 1:</h2>
+    <table id="input_1">
+        <tr>
+            <td id="td1"></td>
+            <td id="td2"></td>
+            <td id="td3"></td>
+        </tr>
+        <tr>
+            <td id="td4"></td>
+            <td id="td5"></td>
+            <td id="td6"></td>
+        </tr>
+        <tr>
+            <td id="td7"></td>
+            <td id="td8"></td>
+            <td id="td9"></td>
+        </tr>
+    </table>
+    <h2>Matrix 2:</h2>
+    <table id="input_2">
+        <tr>
+            <td id="td10"></td>
+            <td id="td11"></td>
+            <td id="td12"></td>
+        </tr>
+        <tr>
+            <td id="td13"></td>
+            <td id="td14"></td>
+            <td id="td15"></td>
+        </tr>
+        <tr>
+            <td id="td16"></td>
+            <td id="td17"></td>
+            <td id="td18"></td>
+        </tr>
+    </table>
+    </div><br><br>
+    <h2>Result:</h2>
+    <table id="result">
+        <tr>
+            <td id="td19"></td>
+            <td id="td20"></td>
+            <td id="td21"></td>
+        </tr>
+        <tr>
+            <td id="td22"></td>
+            <td id="td23"></td>
+            <td id="td24"></td>
+        </tr>
+        <tr>
+            <td id="td25"></td>
+            <td id="td26"></td>
+            <td id="td27"></td>
+        </tr>
+    </table>
+    <script>
+        function matrix() {
+            let matrix1 = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
+            let result = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++) {
+                    matrix1[i][j] +=parseInt( prompt(`Enter a number for Row ${i + 1} Column ${j + 1} in 1st Array`));
+                }
+            }
+            let matrix2 = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++) {
+                    matrix2[i][j]+=parseInt( prompt(`Enter a number for Row ${i + 1} Column ${j + 1} in 2nd Array`));
+                    result[i][j] = matrix1[i][j] + matrix2[i][j];
+                }
+            }
+
+            document.querySelector("#td1").innerHTML = matrix1[0][0];
+            document.querySelector("#td2").innerHTML = matrix1[0][1];
+            document.querySelector("#td3").innerHTML = matrix1[0][2];
+            document.querySelector("#td4").innerHTML = matrix1[1][0];
+            document.querySelector("#td5").innerHTML = matrix1[1][1];
+            document.querySelector("#td6").innerHTML = matrix1[1][2];
+            document.querySelector("#td7").innerHTML = matrix1[2][0];
+            document.querySelector("#td8").innerHTML = matrix1[2][1];
+            document.querySelector("#td9").innerHTML = matrix1[2][2];
+
+            document.querySelector("#td10").innerHTML = matrix2[0][0];
+            document.querySelector("#td11").innerHTML = matrix2[0][1];
+            document.querySelector("#td12").innerHTML = matrix2[0][2];
+            document.querySelector("#td13").innerHTML = matrix2[1][0];
+            document.querySelector("#td14").innerHTML = matrix2[1][1];
+            document.querySelector("#td15").innerHTML = matrix2[1][2];
+            document.querySelector("#td16").innerHTML = matrix2[2][0];
+            document.querySelector("#td17").innerHTML = matrix2[2][1];
+            document.querySelector("#td18").innerHTML = matrix2[2][2];
+
+            document.querySelector("#td19").innerHTML = result[0][0];
+            document.querySelector("#td20").innerHTML = result[0][1];
+            document.querySelector("#td21").innerHTML = result[0][2];
+            document.querySelector("#td22").innerHTML = result[1][0];
+            document.querySelector("#td23").innerHTML = result[1][1];
+            document.querySelector("#td24").innerHTML = result[1][2];
+            document.querySelector("#td25").innerHTML = result[2][0];
+            document.querySelector("#td26").innerHTML = result[2][1];
+            document.querySelector("#td27").innerHTML = result[2][2];
+        }
+    </script>
+</body>
+
+</html>
